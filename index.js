@@ -4,8 +4,8 @@ function Search()
     var wrapper=document.getElementById("wrapper");
     wrapper.innerHTML="";
     input=document.getElementById("keyword").value;
-    var url="https://imdb-api.com/en/API/SearchMovie/k_ecehvy84/"+input;
-    console.log("Searched for "+input);
+    var url=SearchForWhat()+input;
+    //console.log("Searched for "+input);
     fetch(url)
         .then(
             r => {
@@ -57,6 +57,24 @@ function CreateParagraph(elementText)
     var text=document.createTextNode(elementText);
     paragraph.appendChild(text);
     return paragraph;
+}
+
+function SearchForWhat()
+{
+    var searchList=document.getElementById("searchList");
+    var value=searchList.value;
+    if(value=="movies")
+    {
+        return "https://imdb-api.com/en/API/SearchMovie/k_ecehvy84/";
+    }
+    else if(value=="series")
+    {
+        return "https://imdb-api.com/en/API/SearchSeries/k_ecehvy84/";
+    }
+    else if(value=="episodes")
+    {
+        return "https://imdb-api.com/en/API/SearchEpisode/k_ecehvy84/";
+    }
 }
 
 window.addEventListener('load', () => {
