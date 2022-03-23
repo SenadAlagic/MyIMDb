@@ -44,6 +44,10 @@ function CreateDiv(element)
     // newDiv.appendChild(descriptionParagaph);
     newDiv.appendChild(CreateParagraph(element.description))
 
+    var image=document.createElement("img")
+    image.setAttribute("src",element.image);
+
+    newDiv.appendChild(image);
     //append to body
     wrapper.appendChild(newDiv);
 }
