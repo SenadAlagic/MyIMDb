@@ -6,3 +6,47 @@ img{
     height:300px;
     width:200px;
 }
+
+#search
+{
+    margin:auto;
+}
+html
+{
+    height: 100%;
+    width: 100%;
+}
+#bodyLanding
+{
+    height: 100%;
+    width: 100%; 
+}
+#wrapperLanding
+{
+    height: 20%;
+    width: 50%;
+    margin:auto;
+}
+#paragraph{
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+#keywordLanding,#buttonLanding,#paragraphLanding
+{
+    margin: auto;
+    display: block;
+    margin-bottom: 10px;
+}
+#keywordLanding,#buttonLanding,#listLanding
+{
+    font-size: 20px;
+}
+#keywordLanding
+{
+    display: inline;
+}
+#inputarea
+{
+    text-align: center;
+}

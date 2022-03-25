@@ -1,4 +1,10 @@
 var input;
+var inputLanding;
+function SearchLanding()
+{
+    inputLanding=document.getElementById("keywordLanding").value;
+    location.href="index.html";
+}
 function Search()
 {
     var wrapper=document.getElementById("wrapper");
@@ -79,4 +85,5 @@ function SearchForWhat()
 
 window.addEventListener('load', () => {
     console.log("Loaded and ready!");
+    document.getElementById("keyword").value=inputLanding;
 });
