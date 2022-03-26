@@ -1,9 +1,13 @@
 var input;
-var inputLanding;
 function SearchLanding()
 {
-    inputLanding=document.getElementById("keywordLanding").value;
+    sessionStorage.setItem('input', document.getElementById("keywordLanding").value)
     location.href="index.html";
+}
+function OnloadSearch()
+{
+    document.getElementById("keyword").value=sessionStorage.getItem('input');
+    Search();
 }
 function Search()
 {
@@ -85,5 +89,4 @@ function SearchForWhat()
 
 window.addEventListener('load', () => {
     console.log("Loaded and ready!");
-    document.getElementById("keyword").value=inputLanding;
 });
