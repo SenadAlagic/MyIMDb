@@ -34,11 +34,16 @@ function Search()
         console.log(err);
     });
 }
+function TestTest()
+{
+    console.log("Test successful!");
+}
 function CreateDiv(element)
 {
     var wrapper=document.getElementById("wrapper");
     var newDiv=document.createElement("div");
     newDiv.setAttribute("id","result");
+    newDiv.setAttribute("onclick","TestTest()");
 
     //add and create a title
     // var titleParagaph = document.createElement("p");
