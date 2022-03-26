@@ -1,6 +1,7 @@
 function OnloadSearch()
 {
     document.getElementById("keyword").value=sessionStorage.getItem('input');
+    document.getElementById("searchList").value=sessionStorage.getItem('listInput');
     Search();
 }
 function Search()
@@ -28,16 +29,17 @@ function Search()
         console.log(err);
     });
 }
-function TestTest()
+function seeDetails(elementId)
 {
-    console.log("Successful");
+    sessionStorage.setItem('selectedMovieId',elementId);
+    location.href="info.html";
 }
 function CreateDiv(element)
 {
     var wrapper=document.getElementById("wrapper");
     var newDiv=document.createElement("div");
     newDiv.setAttribute("id","result");
-    newDiv.setAttribute("onclick","TestTest()");
+    newDiv.setAttribute("onclick","seeDetails('"+element.id+"')");
 
     newDiv.appendChild(CreateParagraph(element.title));
     newDiv.appendChild(CreateParagraph(element.description))
