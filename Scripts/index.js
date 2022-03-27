@@ -1,7 +1,7 @@
 var input;
 function SearchLanding()
 {
-    sessionStorage.setItem('input', document.getElementById("keywordLanding").value)
+    sessionStorage.setItem('input', document.getElementById("insertText").value)
     sessionStorage.setItem('listInput', document.getElementById("searchList").value)
     location.href="search.html";
 }

@@ -1,52 +1,144 @@
-#result{
-    border: black;
-    background-color: beige;
-}
-img{
-    height:300px;
-    width:200px;
+:root{
+    --black: #000000;
+    --background-primary-grey:#1d1d1d;
+    --secondary-grey:#3f3f3f;
+    --third-grey:#444444;
+    --white:#FFFFFF;
+    --secondary-white:#dddddd;
+    --yellow:rgb(245,197,24);
+    --placeholder-color:rgba(211, 211, 211, 0.4);
 }
 
-#search
-{
-    margin:auto;
+*{
+    font-family: 'Poppins', sans-serif;
 }
-html
-{
+
+html{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: var(--background-primary-grey);
+    color: var(--secondary-white);
     height: 100%;
     width: 100%;
+    margin: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-#bodyLanding
-{
-    height: 100%;
-    width: 100%; 
-}
-#wrapperLanding
-{
-    height: 20%;
-    width: 50%;
-    margin:auto;
-}
-#paragraph{
-    font-size: 35px;
+
+#wrapper{
+    max-width: 960px;
+    /* height: 600px; */
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
-    margin-bottom: 10px;
+
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-#keywordLanding,#buttonLanding,#paragraphLanding
-{
-    margin: auto;
-    display: block;
-    margin-bottom: 10px;
+
+#TitleDiv span{
+    color: var(--yellow);
 }
-#keywordLanding,#buttonLanding,#listLanding
-{
+
+#TitleDiv{
+    flex-basis: 100%;
+    margin-bottom: 32px;
+}
+
+#TitleDiv h1{
+    font-size: 64px;
+    font-weight:800;
+    letter-spacing: 2px;
+    margin: 0;
+    color: var(--secondary-white);
+}
+
+#search{
+    flex-basis: 100%;
+}
+
+#search h2{
+    margin-bottom: 16px;
+    margin-top: 0;
+    font-weight: 600;
     font-size: 20px;
 }
-#keywordLanding
-{
-    display: inline;
+
+#questionParagraph{
+    font-size: 48px;
+    margin: 0;
 }
-#inputarea
-{
-    text-align: center;
+
+#searchArea{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+#insertText{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--secondary-grey);
+    width: auto;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+#insertText i{
+    color: var(--secondary-white);
+    margin-right: 10px;
+    color: var(--placeholder-color);
+}
+
+#textInput{
+    color: var(--secondary-white);
+    font-size: 16px;
+    padding: 5px 10px;
+    border: none;
+    background-color: transparent;
+    outline: none;
+}
+
+#searchList{
+    width: 20%;
+    font-size: 16px;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--secondary-grey);
+    outline: none;
+    color: var(--secondary-white); 
+}
+
+#buttonSearchDiv{
+    width: 100%;
+}
+
+#buttonSearchDiv button{
+    width: 30%;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: var(--yellow);
+    border-radius: 4px;
+    border: none;
+    padding:5px;
+}
+
+#buttonSearchDiv button:hover{
+    background-color: var(--third-grey);
+    color: var(--yellow);
 }
