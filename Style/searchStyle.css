@@ -72,3 +72,10 @@ body{
 #inputWord{
     color: var(--yellow);
 }
+
+
+/* dodao senad cisto da bude pregledno */
+img{
+    height: 300px;
+    width: 200px;
+}

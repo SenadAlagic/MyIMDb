@@ -1,16 +1,16 @@
+var input=sessionStorage.getItem('input');
+var listInput=sessionStorage.getItem('listInput');
 function OnloadSearch()
 {
-    document.getElementById("keyword").value=sessionStorage.getItem('input');
-    document.getElementById("searchList").value=sessionStorage.getItem('listInput');
+    document.getElementById("inputWord").textContent=input;
     Search();
 }
 function Search()
 {
-    var wrapper=document.getElementById("wrapper");
+    var wrapper=document.getElementById("resultsContainer");
     wrapper.innerHTML="";
-    input=document.getElementById("keyword").value;
     var url=SearchForWhat()+input;
-    //console.log("Searched for "+input);
+    console.log("Searched for "+input+" "+listInput+"\n"+url);
     fetch(url)
         .then(
             r => {
@@ -36,7 +36,7 @@ function seeDetails(elementId)
 }
 function CreateDiv(element)
 {
-    var wrapper=document.getElementById("wrapper");
+    var container=document.getElementById("resultsContainer");
     var newDiv=document.createElement("div");
     newDiv.setAttribute("id","result");
     newDiv.setAttribute("onclick","seeDetails('"+element.id+"')");
@@ -49,7 +49,7 @@ function CreateDiv(element)
 
     newDiv.appendChild(image);
     //append to body
-    wrapper.appendChild(newDiv);
+    container.appendChild(newDiv);
 }
 function CreateParagraph(elementText)
 {
@@ -60,8 +60,7 @@ function CreateParagraph(elementText)
 }
 function SearchForWhat()
 {
-    var searchList=document.getElementById("searchList");
-    var value=searchList.value;
+    var value=listInput;
     if(value=="movies")
     {
         return "https://imdb-api.com/en/API/SearchMovie/k_ecehvy84/";
@@ -76,4 +75,4 @@ function SearchForWhat()
     }
 }
 
-//Umjesto <span> InputWord poslati onaj input koji je korisnik ukucao
+//Umjesto <span> InputWord poslati onaj input koji je korisnik ukucao ----- urađeno
