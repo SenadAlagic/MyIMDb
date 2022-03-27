@@ -75,3 +75,5 @@ function SearchForWhat()
         return "https://imdb-api.com/en/API/SearchEpisode/k_ecehvy84/";
     }
 }
+
+//Umjesto <span> InputWord poslati onaj input koji je korisnik ukucao

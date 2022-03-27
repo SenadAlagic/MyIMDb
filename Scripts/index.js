@@ -8,3 +8,6 @@ function SearchLanding()
 window.addEventListener('load', () => {
     console.log("Loaded and ready!");
 });
+
+//Ovdje mozda ubaciti error provider ako se ne unese naziv
+//Omoguciti da searcha kada se klikne enter

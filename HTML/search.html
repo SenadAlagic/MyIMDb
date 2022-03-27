@@ -2,14 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href='https://css.gg/arrow-left.css' rel='stylesheet'>
     <script src="/Scripts/search.js"></script>
     <link rel="stylesheet" href="/Style/searchStyle.css">
-    <title>MyIMDB v1</title>
+    <title>MyIMDb</title>
 </head>
 <body onload="OnloadSearch()">
-    <div>
+    <a href="index.html" id="goBackButton">
+        <span id="buttonContent">
+            <i class="gg-arrow-left"></i>
+            <span>Go back to search</span>
+        </span> 
+    </a>
+    <div id="wrapper">
+        <h2>Search results for "<span id="inputWord">InputWord</span>"</h2>
+    </div>
+    <!-- <div>
         What movie is on your mind?
         <input type="text" id="keyword">
         <select name="list" id="searchList">
@@ -26,6 +36,6 @@
             <p>Description:</p>
             <p>Image: </p>
         </div>
-    </div>
+    </div> -->
 </body>
 </html>
