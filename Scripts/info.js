@@ -56,7 +56,7 @@ function Search()
                         });
                         t.actors.forEach(elements=>
                         {
-                            console.log(elements.name+" as "+ asCharacter[0]);
+                            console.log(elements.name+" as "+ elements.asCharacter);
                         });
                         t.others.forEach(elements=>
                         {
