@@ -11,6 +11,7 @@
 
 *{
     font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
 }
 
 html{
@@ -61,7 +62,6 @@ body{
     flex-direction: row;
     justify-content: center;
     gap: 10px;
-    
 }
 
 #wrapper > h2{
@@ -73,9 +73,135 @@ body{
     color: var(--yellow);
 }
 
+#wrapper #resultsContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 48px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
 
-/* dodao senad cisto da bude pregledno */
-img{
-    height: 300px;
-    width: 200px;
+#wrapper #resultsContainer >div{
+    width: 32%;
+    height: 400px;
+    margin-bottom: 16%;
+    margin-left: 0.6%;
+    margin-right: 0.6%;
+    background-color: var(--secondary-grey);
+    color: var(--secondary-white);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+#wrapper #resultsContainer >div:hover{
+    background-color: var(--secondary-white);
+    color: var(--secondary-grey);
+}
+
+#wrapper #resultsContainer >div img{
+    height: 100%;
+    width: 100%;
+}
+
+@media only screen and (max-width:850px) {
+    #wrapper #resultsContainer >div{
+        width: 46%;
+        margin-bottom: 16%;
+        margin-left: 2%;
+        margin-right: 2%;
+        height: 500px;
+    }
+
+    #wrapper #resultsContainer{
+        margin: 0 20px;
+    }
+
+    #buttonContent span{
+        display: none;
+    }
+}
+
+@media only screen and (max-width:500px) and (min-width:401px) {
+    #wrapper #resultsContainer >div{
+        width: 90%;
+        margin-bottom: 32%;
+        height: 500px;
+    }
+
+    #wrapper #resultsContainer{
+        margin: 0 20px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #wrapper h2{
+        font-size: 24px;
+    }
+
+    #buttonContent span{
+        display: none;
+    }
+
+    #goBackButton{
+        top: 20px;
+        left: 20px;
+        padding: 4px 8px;
+    }
+}
+
+@media only screen and (max-width:650px) and (min-width:501px) {
+    #wrapper #resultsContainer >div{
+        width: 90%;
+        margin-bottom: 24%;
+        height: 600px;
+    }
+
+    #wrapper #resultsContainer{
+        margin: 0 20px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #wrapper h2{
+        font-size: 24px;
+    }
+
+    #buttonContent span{
+        display: none;
+    }
+
+    #goBackButton{
+        top: 20px;
+        left: 20px;
+        padding: 4px 8px;
+    }
+}
+
+@media only screen and (max-width:400px) {
+    #wrapper #resultsContainer >div{
+        width: 90%;
+        margin-bottom: 32%;
+        height: 400px;
+    }
+
+    #wrapper #resultsContainer{
+        margin: 0 20px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #wrapper h2{
+        font-size: 24px;
+    }
+
+    #buttonContent span{
+        display: none;
+    }
+
+    #goBackButton{
+        top: 20px;
+        left: 20px;
+        padding: 4px 8px;
+    }
 }

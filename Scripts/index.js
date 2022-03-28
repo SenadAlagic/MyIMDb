@@ -2,7 +2,7 @@ var input;
 function SearchLanding()
 {
     sessionStorage.setItem('input', document.getElementById("textInput").value)
-    sessionStorage.setItem('listInput', document.getElementById("searchList").value)
+    sessionStorage.setItem('listInput', document.getElementById("searchList").value);
     location.href="search.html";
 }
 window.addEventListener('load', () => {
