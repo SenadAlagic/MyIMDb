@@ -61,6 +61,10 @@ function Search()
                         t.others.forEach(elements=>
                         {
                             console.log(elements.job);
+                            elements.items.forEach(individual=>
+                            {
+                                console.log(individual.description+"----"+individual.name)
+                            });
                         });
                 });
             })

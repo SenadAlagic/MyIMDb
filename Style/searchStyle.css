@@ -104,6 +104,11 @@ body{
     width: 100%;
 }
 
+/* ovo sam ja dodao kao eksperiment, ukljuci i ti pa vidi nesto se prepoli boja 
+#wrapper #resultsContainer >div img:hover{
+    opacity: 80%;
+} */
+
 @media only screen and (max-width:850px) {
     #wrapper #resultsContainer >div{
         width: 46%;
